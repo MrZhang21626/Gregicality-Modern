@@ -1,0 +1,6 @@
+{
+  "itemGroup.gregicality_modern.main_tab": "Gregicality Modern",
+
+  "block.gregicality_modern.large_steam_compressor": "大型蒸汽压缩机",
+  "block.gregicality_modern.large_steam_compressor.tooltip": "一次压缩8个物品"
+}

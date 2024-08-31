@@ -1,0 +1,6 @@
+{
+  "itemGroup.gregicality_modern.main_tab": "Gregicality Modern",
+
+  "block.gregicality_modern.large_steam_compressor": "Large Steam Compressor",
+  "block.gregicality_modern.large_steam_compressor.tooltip": "Compress 8 items at once"
+}
