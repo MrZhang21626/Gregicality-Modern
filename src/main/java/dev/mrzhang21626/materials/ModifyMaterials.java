@@ -11,7 +11,7 @@ import static com.gregtechceu.gtceu.api.data.chemical.material.info.MaterialFlag
 import static com.gregtechceu.gtceu.common.data.GTMaterials.*;
 import static dev.mrzhang21626.materials.Materials.*;
 
-public class ModifyGTMaterials {
+public class ModifyMaterials {
     public static void init() {
         Hafnium.setProperty(PropertyKey.INGOT, new IngotProperty());
 
@@ -28,6 +28,11 @@ public class ModifyGTMaterials {
         Lafium.setProperty(PropertyKey.FLUID_PIPE, new FluidPipeProperties(23000, 2000, true, true, true, true));
         //EnrichedNaquadahAlloy.setProperty(PropertyKey.FLUID_PIPE, new FluidPipeProperties(25000, 2200, true, true, true, true));
         TantalumHafniumSeaborgiumCarbide.setProperty(PropertyKey.FLUID_PIPE, new FluidPipeProperties(500000, 2400, true, true, true, true));
+
+        addLiquid(Helium3,4);
+        addLiquid(Nitrogen,70);
+        addLiquid(Fluorine,21);
+        addLiquid(Xenon,165);
 
         addPlasma(Radon);
         addPlasma(Potassium);
@@ -111,5 +116,18 @@ public class ModifyGTMaterials {
     static void addPlasma(Material material) {
         material.getProperties().ensureSet(PropertyKey.FLUID);
         material.getProperty(PropertyKey.FLUID).enqueueRegistration(FluidStorageKeys.PLASMA, new FluidBuilder());
+    }static void addGas(Material material,int temperature) {
+        material.getProperties().ensureSet(PropertyKey.FLUID);
+        material.getProperty(PropertyKey.FLUID).enqueueRegistration(FluidStorageKeys.GAS, new FluidBuilder().temperature(temperature));
+    }
+
+    static void addLiquid(Material material,int temperature) {
+        material.getProperties().ensureSet(PropertyKey.FLUID);
+        material.getProperty(PropertyKey.FLUID).enqueueRegistration(FluidStorageKeys.LIQUID, new FluidBuilder().temperature(temperature));
+    }
+
+    static void addPlasma(Material material,int temperature) {
+        material.getProperties().ensureSet(PropertyKey.FLUID);
+        material.getProperty(PropertyKey.FLUID).enqueueRegistration(FluidStorageKeys.PLASMA, new FluidBuilder().temperature(temperature));
     }
 }

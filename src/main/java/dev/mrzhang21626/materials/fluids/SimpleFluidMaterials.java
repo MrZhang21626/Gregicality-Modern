@@ -1,16 +1,14 @@
-package dev.mrzhang21626.materials;
+package dev.mrzhang21626.materials.fluids;
 
 import com.gregtechceu.gtceu.api.data.chemical.material.Material;
-import com.gregtechceu.gtceu.api.data.chemical.material.info.MaterialIconSet;
 import com.gregtechceu.gtceu.api.data.chemical.material.stack.MaterialStack;
 import dev.mrzhang21626.GregicalityModern;
 import dev.mrzhang21626.utils.TextFormatting;
 
 import static com.gregtechceu.gtceu.common.data.GTMaterials.*;
-import static com.gregtechceu.gtceu.common.data.GTMaterials.Aluminium;
 import static dev.mrzhang21626.materials.Materials.*;
 
-public class SimpleMaterials {
+public class SimpleFluidMaterials {
     public static void init() {
         NaquadricSolution = simpleFluidMaterial("naquadric_solution", 0x232225, "NqNO2");
         EnrichedNaquadricSolution = simpleFluidMaterial("enriched_naquadric_solution", 0x312735, "Nq+NO2");
@@ -41,11 +39,11 @@ public class SimpleMaterials {
         NaquadahSulfate = simpleFluidMaterial("naquadah_sulfate", 0x38330f, "NqSO4");
         NaquadahSolution = simpleFluidMaterial("naquadah_solution", 0x523b3a, "NqNH4NO3");
         ClearNaquadahLiquid = simpleFluidMaterial("clear_naquadah_liquid", 0xa89f9e, "Nq?");
-        ComplicatedNaquadahGas = simpleFluidMaterial("complicated_naquadah_gas", 0x403d3d, "Nq??");
+        ComplicatedNaquadahGas = simpleFluidMaterial("complicated_naquadah_gas", 0x403d3d,false,false,true, "Nq??");
         ComplicatedHeavyNaquadah = simpleFluidMaterial("complicated_heavy_naquadah", 0x403d3d, "Nq??");
         ComplicatedMediumNaquadah = simpleFluidMaterial("complicated_medium_naquadah", 0x403d3d, "Nq??");
         ComplicatedLightNaquadah = simpleFluidMaterial("complicated_light_naquadah", 0x403d3d, "Nq??");
-        NaquadahGas = simpleFluidMaterial("naquadah_gas", 0x575757, "Nq");
+        NaquadahGas = simpleFluidMaterial("naquadah_gas", 0x575757,false,false,true, "Nq");
         LightNaquadah = simpleFluidMaterial("light_naquadah", 0x2e2e2e, "Nq");
         MediumNaquadah = simpleFluidMaterial("medium_naquadah", 0x2e2e2e, "Nq");
         HeavyNaquadah = simpleFluidMaterial("heavy_naquadah", 0x2e2e2e, "Nq");
@@ -138,7 +136,7 @@ public class SimpleMaterials {
         SodiumCyanide = simpleFluidMaterial("sodium_cyanide", 0x5f7c8c, "NaCN");
         GoldCyanide = simpleFluidMaterial("gold_cyanide", 0x8c8761, "AuCN");
         ChlorideLeachedSolution = simpleFluidMaterial("chloride_leached_solution", 0x41472e, "CaCl2(CuCl2)(PbCl2)(BiCl3)(FeCl2)");
-        MolybdenumFlue = simpleFluidMaterial("molybdenum_flue_gas", 0x333338, "H2OReS?");
+        MolybdenumFlue = simpleFluidMaterial("molybdenum_flue_gas", 0x333338,false,false,true, "H2OReS?");
         RheniumSulfuricSolution = simpleFluidMaterial("rhenium_sulfuric_solution", 0xbabaff, "ReS?");
         AmmoniumSulfate = simpleFluidMaterial("ammonium_sulfate", 0x6464f5, "(NH4)2SO4");
         AmmoniumPerrhenate = simpleFluidMaterial("ammonium_perrhenate", 0x1c1c45, "NH4ReO4");
@@ -279,20 +277,20 @@ public class SimpleMaterials {
         HotMetastableOganesson = simpleFluidMaterial("hot_oganesson", 0x521973, "Og");
         TitaniumTetrafluoride = simpleFluidMaterial("titanium_tetrafluoride", Titanium.getMaterialRGB());
         Titanium50Tetrafluoride = simpleFluidMaterial("titanium50_tetrafluoride", Titanium.getMaterialRGB());
-        Carbon12 = simpleFluidMaterial("carbon_12", Carbon.getMaterialRGB(), "C_12");
-        Carbon13 = simpleFluidMaterial("carbon_13", Carbon.getMaterialRGB(), "C_13");
-        Nitrogen14 = simpleFluidMaterial("nitrogen_14", Nitrogen.getMaterialRGB(), "N_14");
-        NItrogen15 = simpleFluidMaterial("nitrogen_15", Nitrogen.getMaterialRGB(), "N_15");
-        CNOcatalyst = simpleFluidMaterial("cno_catalyst", (Nitrogen.getMaterialRGB() + Carbon.getMaterialRGB()) / 2, "(C_12)(C_13)(N_14)(N_15)");
-        Calcium44 = simpleFluidMaterial("calcium_44", Calcium.getMaterialRGB(), "Ca_44");
-        OgannesonBreedingBase = simpleFluidMaterial("og_breeding_base", ((Titanium.getMaterialRGB() + 0xA85A12) / 2), "(Ti_50)Cf_252");
+        Carbon12 = simpleFluidMaterial("carbon_12", Carbon.getMaterialRGB(), "C-12");
+        Carbon13 = simpleFluidMaterial("carbon_13", Carbon.getMaterialRGB(), "C-13");
+        Nitrogen14 = simpleFluidMaterial("nitrogen_14", Nitrogen.getMaterialRGB(), "N-14");
+        NItrogen15 = simpleFluidMaterial("nitrogen_15", Nitrogen.getMaterialRGB(), "N-15");
+        CNOcatalyst = simpleFluidMaterial("cno_catalyst", (Nitrogen.getMaterialRGB() + Carbon.getMaterialRGB()) / 2, "(C-12)(C-13)(N-14)(N-15)");
+        Calcium44 = simpleFluidMaterial("calcium_44", Calcium.getMaterialRGB(), "Ca-44");
+        OgannesonBreedingBase = simpleFluidMaterial("og_breeding_base", ((Titanium.getMaterialRGB() + 0xA85A12) / 2), "(Ti-50)Cf-252");
         QuassifissioningPlasma = simpleFluidMaterial("quasifissioning_plasma", 0xD5CB54, TextFormatting.OBFUSCATED + "???");
-        Ytterbium178 = simpleFluidMaterial("ytterbium_178", Ytterbium.getMaterialRGB(), "Yb_178");
+        Ytterbium178 = simpleFluidMaterial("ytterbium_178", Ytterbium.getMaterialRGB(), "Yb-178");
         FlYbPlasma = simpleFluidMaterial("flyb_plasma", (Ytterbium.getMaterialRGB() + 0x521973) / 2, "FlYb");
-        Chromium48 = simpleFluidMaterial("chromium48", Chromium.getMaterialRGB(), true, true, false, "Cr_48");
-        Iron52 = simpleFluidMaterial("iron52", Iron.getMaterialRGB(), true, true, false, "Fe_52");
-        Nickel56 = simpleFluidMaterial("nickel56", Nickel.getMaterialRGB(), true, true, false, "Ni_56");
-        Titanium44 = simpleFluidMaterial("titanium44", Titanium.getMaterialRGB(), true, true, false, "Ti_44");
+        Chromium48 = simpleFluidMaterial("chromium48", Chromium.getMaterialRGB(), true, true, false, "Cr-48");
+        Iron52 = simpleFluidMaterial("iron52", Iron.getMaterialRGB(), true, true, false, "Fe-52");
+        Nickel56 = simpleFluidMaterial("nickel56", Nickel.getMaterialRGB(), true, true, false, "Ni-56");
+        Titanium44 = simpleFluidMaterial("titanium44", Titanium.getMaterialRGB(), true, true, false, "Ti-44");
         HeliumCNO = simpleFluidMaterial("helium_rich_cno", 0x59ffa6, true, true, false, "He?");
 //        //                                                   PlasmaChromium48 = simpleFluidMaterial("chromium48_plasma", Chrome.getMaterialRGB());
 //        //                                                   PlasmaIron52 = simpleFluidMaterial("iron52_plasma", Iron.getMaterialRGB());
@@ -363,7 +361,7 @@ public class SimpleMaterials {
         IsopropylAcetate = simpleFluidMaterial("isopropyl_acetate", (Strontium.getMaterialRGB() + IsopropylAlcohol.getMaterialRGB() + Water.getMaterialRGB()) / 3, "(CH3)2CHCOOCH3");
         ChlorinatedSolvents = simpleFluidMaterial("chlorinated_solvents", 0x40804c, "(CH4)2Cl5");
         Dichloromethane = simpleFluidMaterial("dichloromethane", Chloromethane.getMaterialRGB() - 10, "CH2Cl2");
-        ButanolGas = simpleFluidMaterial("butanol_gas", Butanol.getMaterialRGB() + 20, "C4H9OH");
+        ButanolGas = simpleFluidMaterial("butanol_gas", Butanol.getMaterialRGB() + 20,false,false,true, "C4H9OH");
         Tributylamine = simpleFluidMaterial("tributylamine", 0x801a80, "(C4H9)3N");
         CrudeAluminaSolution = simpleFluidMaterial("crude_alumina_solution", (Aluminium.getMaterialRGB() - 30), "(Al(NO3)3)2(CH2Cl2)(C12H27N)");
         AluminaSolution = simpleFluidMaterial("alumina_solution", (Aluminium.getMaterialRGB() - 15), "(Al2O3)(CH2Cl2)(C12H27N)2");
@@ -427,8 +425,8 @@ public class SimpleMaterials {
         HeavyLeptonMix = simpleFluidMaterial("heavy_lepton_mix", 0x5adf52, TextFormatting.OBFUSCATED + "a" + TextFormatting.RESET + "(t2)u" + TextFormatting.OBFUSCATED + "a");
         CosmicComputingMix = simpleFluidMaterial("cosmic_computing_mix", 0xafad2f, TextFormatting.OBFUSCATED + "aaaaa");
         HeavyQuarkEnrichedMix = simpleFluidMaterial("heavy_quark_enriched_mix", 0xefefef, TextFormatting.OBFUSCATED + "a" + TextFormatting.RESET + "(u2)d(c2)s(t2)b" + TextFormatting.OBFUSCATED + "a");
-        DeuteriumSuperheavyMix = simpleFluidMaterial("deuterium_superheavy_mix", 0xa2d2a4, "(H_2)FlHsOg");
-        ScandiumTitanium50Mix = simpleFluidMaterial("scandium_titanium50_mix", (Scandium.getMaterialRGB() + Titanium.getMaterialRGB()) / 2, "ScTi_50");
+        DeuteriumSuperheavyMix = simpleFluidMaterial("deuterium_superheavy_mix", 0xa2d2a4, "(H-2)FlHsOg");
+        ScandiumTitanium50Mix = simpleFluidMaterial("scandium_titanium50_mix", (Scandium.getMaterialRGB() + Titanium.getMaterialRGB()) / 2, "ScTi-50");
         RadonRadiumMix = simpleFluidMaterial("radon_radium_mix", (Radium.getMaterialRGB() + Radon.getMaterialRGB()) / 2, "RnRa");
         Phenylsodium = simpleFluidMaterial("phenylsodium", 0x2c2cc8, "C6H5Na");
         Difluoroaniline = simpleFluidMaterial("difluoroaniline", 0x3fac4a, "C6H5F2N");
@@ -439,12 +437,12 @@ public class SimpleMaterials {
         GlucoseIronSolution = simpleFluidMaterial("glucose_iron_solution", (Sugar.getMaterialRGB() + Iron.getMaterialRGB()) / 2, "(C6H12O6)FeCl3");
         GrapheneOxidationSolution = simpleFluidMaterial("graphene_oxidation_solution", 0x96821a, "(KMnO4)(NaNO3)(H2SO4)");
         SupercriticalCO2 = simpleFluidMaterial("supercritcal_co2", CarbonDioxide.getMaterialRGB(), "CO2");
-        NobleGases = simpleFluidMaterial("noble_gases_mixture", (Helium.getMaterialRGB() + Neon.getMaterialRGB() + Argon.getMaterialRGB() + Krypton.getMaterialRGB() + Xenon.getMaterialRGB() + Radon.getMaterialRGB()), "HeNeArKrXeRn");
+        NobleGases = simpleFluidMaterial("noble_gases_mixture", (Helium.getMaterialRGB() + Neon.getMaterialRGB() + Argon.getMaterialRGB() + Krypton.getMaterialRGB() + Xenon.getMaterialRGB() + Radon.getMaterialRGB()),false,false,true, "HeNeArKrXeRn");
         NonMetals = simpleFluidMaterial("non_metals", (Hydrogen.getMaterialRGB() + Boron.getMaterialRGB() + Carbon.getMaterialRGB() + Nitrogen.getMaterialRGB() + Oxygen.getMaterialRGB() + Fluorine.getMaterialRGB() + Phosphorus.getMaterialRGB() + Sulfur.getMaterialRGB() + Chlorine.getMaterialRGB() + Arsenic.getMaterialRGB() + Selenium.getMaterialRGB() + Bromine.getMaterialRGB() + Tellurium.getMaterialRGB() + Iodine.getMaterialRGB() + Astatine.getMaterialRGB()), "BCPSAsSeTeIAtONHFClBr");
         DenseNeutronPlasma = simpleFluidMaterial("dense_neutron_plasma", 0xacecac, 1000000, false, true, false, TextFormatting.OBFUSCATED + "a" + TextFormatting.RESET + TextFormatting.GRAY + "n" + TextFormatting.OBFUSCATED.toString() + "a");
         CosmicMeshPlasma = simpleFluidMaterial("cosmic_mesh_plasma", 0x1c1c8c, 1000000, false, true, false, TextFormatting.OBFUSCATED + "nn");
         SuperfluidHelium = simpleFluidMaterial("superfluid_helium", Helium.getMaterialRGB(), 2, false, true, false, "He");
-        //LiquidHelium3 = simpleFluidMaterial("liquid_helium_3", Helium3.getMaterialRGB(), 4, false, true, false, "He_3");
+        //LiquidHelium3 = simpleFluidMaterial("liquid_helium_3", Helium3.getMaterialRGB(), 4, false, true, false, "He-3");
         LiquidEnrichedHelium = simpleFluidMaterial("liquid_enriched_helium", Helium.getMaterialRGB(), 4, false, true, false, "HeHe-3");
         //LiquidNitrogen = simpleFluidMaterial("liquid_nitrogen", Nitrogen.getMaterialRGB(), 70, false, true, false, "N");
         Methylethanolamine = simpleFluidMaterial("methylethanolamine", 0x6a3baa, "C3H9NO");
@@ -457,14 +455,14 @@ public class SimpleMaterials {
         RheniumScrubbedSolution = simpleFluidMaterial("rhenium_scrubbed_solution", 0xedccca, "Re?");
         NeutroniumDopedNanotubes = simpleFluidMaterial("neutronium_doped_nanotubes", (Neutronium.getMaterialRGB() + CarbonNanotubes.getMaterialRGB()) / 2, "Nt?");
         SupercriticalSteam = simpleFluidMaterial("supercritical_steam", Steam.getMaterialRGB(), "H2O");
-        SupercriticalDeuterium = simpleFluidMaterial("supercritical_deuterium", Deuterium.getMaterialRGB(), "H_2");
+        SupercriticalDeuterium = simpleFluidMaterial("supercritical_deuterium", Deuterium.getMaterialRGB(), "H-2");
         SupercriticalSodiumPotassiumAlloy = simpleFluidMaterial("supercritical_sodium_potassium_alloy", SodiumPotassiumAlloy.getMaterialRGB(), "Na7K3");
         SupercriticalSodium = simpleFluidMaterial("supercritical_sodium", Sodium.getMaterialRGB(), "Na");
         SupercriticalFLiNaK = simpleFluidMaterial("supercritical_flinak", FLiNaKMixture.getMaterialRGB(), "FLiNaK");
         SupercriticalFLiBe = simpleFluidMaterial("supercritical_flibe", FLiBeMixture.getMaterialRGB(), "FLiBe");
         SupercriticalLeadBismuthEutectic = simpleFluidMaterial("supercritical_lead_bismuth_eutectic", LeadBismuthEutectic.getMaterialRGB(), "Pb3Bi7");
-        FreeAlphaGas = simpleFluidMaterial("free_alpha_gas", 0xe0d407, "a");
-        FreeElectronGas = simpleFluidMaterial("free_electron_gas", 0x044c4c, "e-");
+        FreeAlphaGas = simpleFluidMaterial("free_alpha_gas", 0xe0d407,false,false,true, "a");
+        FreeElectronGas = simpleFluidMaterial("free_electron_gas", 0x044c4c,false,false,true, "e-");
         HighEnergyQGP = simpleFluidMaterial("high_energy_qgp", 0x8f00ff, TextFormatting.OBFUSCATED + "a" + TextFormatting.RESET + "(u2)d(c2)s(t2)bg" + TextFormatting.OBFUSCATED + "a");
         AcetylsulfanilylChloride = simpleFluidMaterial("acetylsulfanilyl_chloride", (Aniline.getMaterialRGB() + AceticAnhydride.getMaterialRGB() + ChlorosulfonicAcid.getMaterialRGB()) / 3, "C8H8ClNO3S");
         BenzoylPeroxide = simpleFluidMaterial("benzoyl_peroxide", (Barium.getMaterialRGB() + BenzoylChloride.getMaterialRGB()) / 2, "C14H10O4");
@@ -582,6 +580,4 @@ public class SimpleMaterials {
     private static Material simpleFluidMaterial(String name, int color, MaterialStack... components) {
         return simpleFluidMaterial(name, color, false, true, false).setComponents(components);
     }
-
-    private static Material simpleComponentMaterial(String name, int color, String formula, MaterialIconSet iconSet=MaterialIconSet.)
 }

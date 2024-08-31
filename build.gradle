@@ -3,8 +3,12 @@ plugins {
     id 'maven-publish'
 }
 
+static def releaseTime() {
+    return new Date().format("yyyyMMddHHmm", TimeZone.getTimeZone("GMT+08:00"))
+}
+
 group = project.maven_group
-version = project.mod_version
+version = project.mod_version + "-" + releaseTime() + "-SNAPSHOT"
 
 base {
     archivesName = project.archives_name

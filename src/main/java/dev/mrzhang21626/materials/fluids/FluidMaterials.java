@@ -1,4 +1,4 @@
-package dev.mrzhang21626.materials;
+package dev.mrzhang21626.materials.fluids;
 
 import com.gregtechceu.gtceu.api.data.chemical.material.Material;
 import com.gregtechceu.gtceu.api.data.chemical.material.info.MaterialFlags;

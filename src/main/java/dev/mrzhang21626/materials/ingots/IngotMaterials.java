@@ -1,4 +1,4 @@
-package dev.mrzhang21626.materials;
+package dev.mrzhang21626.materials.ingots;
 
 import com.gregtechceu.gtceu.api.GTValues;
 import com.gregtechceu.gtceu.api.data.chemical.material.Material;
