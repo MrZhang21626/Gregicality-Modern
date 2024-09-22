@@ -1,4 +1,4 @@
-package dev.mrzhang21626.machines.multiblocks;
+package dev.mrzhang21626.machines;
 
 import com.gregtechceu.gtceu.GTCEu;
 import com.gregtechceu.gtceu.api.data.RotationState;
@@ -14,7 +14,7 @@ import net.minecraft.network.chat.Component;
 
 import static dev.mrzhang21626.registries.Registrate.REGISTRATE;
 
-public class LargeSteamCompressor {
+public class Multiblocks {
     public static final MachineDefinition LARGE_STEAM_COMPRESSOR = REGISTRATE.multiblock("large_steam_compressor", SteamParallelMultiblockMachine::new)
             .rotationState(RotationState.NON_Y_AXIS)
             .appearanceBlock(GTBlocks.CASING_BRONZE_BRICKS)
@@ -39,8 +39,6 @@ public class LargeSteamCompressor {
             .tooltips(Component.translatable("block.gregicality_modern.large_steam_compressor.tooltip"))
             .register();
 
-
     public static void init() {
-
     }
 }

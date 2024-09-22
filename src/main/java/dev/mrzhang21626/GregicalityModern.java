@@ -4,11 +4,14 @@ import com.gregtechceu.gtceu.api.GTCEuAPI;
 import com.gregtechceu.gtceu.api.data.chemical.material.event.MaterialEvent;
 import com.gregtechceu.gtceu.api.data.chemical.material.event.PostMaterialEvent;
 import com.gregtechceu.gtceu.api.machine.MachineDefinition;
+import com.gregtechceu.gtceu.api.recipe.GTRecipeType;
 import com.gregtechceu.gtceu.common.data.GTCreativeModeTabs;
 import com.gregtechceu.gtceu.common.data.GTMachines;
 import com.gregtechceu.gtceu.config.ConfigHolder;
+import com.gregtechceu.gtceu.utils.FormattingUtil;
 import com.tterrag.registrate.util.entry.RegistryEntry;
 import dev.mrzhang21626.machines.Machines;
+import dev.mrzhang21626.machines.RecipeTypes;
 import dev.mrzhang21626.materials.Materials;
 import dev.mrzhang21626.materials.ModifyMaterials;
 import net.minecraft.resources.ResourceLocation;
@@ -40,11 +43,11 @@ public final class GregicalityModern {
     public static void init() {
         ConfigHolder.init();
         REGISTRATE.registerRegistrate();
+        REGISTRATE.creativeModeTab(GregicalityModern.MAIN_TAB);
     }
 
-
-    public static ResourceLocation id(String name) {
-        return new ResourceLocation(MOD_ID, name);
+    public static ResourceLocation id(String path) {
+        return new ResourceLocation(MOD_ID, FormattingUtil.toLowerCaseUnder(path));
     }
 
     public static final class Events {
@@ -54,6 +57,7 @@ public final class GregicalityModern {
             bus.addGenericListener(MachineDefinition.class, Events::registerMachines);
             bus.addListener(Events::registerMaterials);
             bus.addListener(Events::modifyMaterials);
+            bus.addGenericListener(GTRecipeType.class, Events::registerRecipeTypes);
         }
 
         public static void registerMachines(GTCEuAPI.RegisterEvent<ResourceLocation, MachineDefinition> event) {
@@ -66,6 +70,10 @@ public final class GregicalityModern {
 
         public static void modifyMaterials(PostMaterialEvent event) {
             ModifyMaterials.init();
+        }
+
+        public static void registerRecipeTypes(GTCEuAPI.RegisterEvent<ResourceLocation, GTRecipeType> event) {
+            RecipeTypes.init();
         }
     }
 }

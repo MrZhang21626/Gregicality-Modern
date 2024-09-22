@@ -29,10 +29,10 @@ public class ModifyMaterials {
         //EnrichedNaquadahAlloy.setProperty(PropertyKey.FLUID_PIPE, new FluidPipeProperties(25000, 2200, true, true, true, true));
         TantalumHafniumSeaborgiumCarbide.setProperty(PropertyKey.FLUID_PIPE, new FluidPipeProperties(500000, 2400, true, true, true, true));
 
-        addLiquid(Helium3,4);
-        addLiquid(Nitrogen,70);
-        addLiquid(Fluorine,21);
-        addLiquid(Xenon,165);
+        addLiquid(Helium3, 4);
+        addLiquid(Nitrogen, 70);
+        addLiquid(Fluorine, 21);
+        addLiquid(Xenon, 165);
 
         addPlasma(Radon);
         addPlasma(Potassium);
@@ -101,6 +101,10 @@ public class ModifyMaterials {
         Rubber.addFlags(GENERATE_BOLT_SCREW);
 
         BorosilicateGlass.addFlags(GENERATE_PLATE);
+
+        //AluminiumChain
+        Aluminium.getProperties().removeProperty(PropertyKey.ORE);
+        Bauxite.setFormula("(TiO2)2Al16H10O29");
     }
 
     static void addGas(Material material) {
@@ -116,17 +120,19 @@ public class ModifyMaterials {
     static void addPlasma(Material material) {
         material.getProperties().ensureSet(PropertyKey.FLUID);
         material.getProperty(PropertyKey.FLUID).enqueueRegistration(FluidStorageKeys.PLASMA, new FluidBuilder());
-    }static void addGas(Material material,int temperature) {
+    }
+
+    static void addGas(Material material, int temperature) {
         material.getProperties().ensureSet(PropertyKey.FLUID);
         material.getProperty(PropertyKey.FLUID).enqueueRegistration(FluidStorageKeys.GAS, new FluidBuilder().temperature(temperature));
     }
 
-    static void addLiquid(Material material,int temperature) {
+    static void addLiquid(Material material, int temperature) {
         material.getProperties().ensureSet(PropertyKey.FLUID);
         material.getProperty(PropertyKey.FLUID).enqueueRegistration(FluidStorageKeys.LIQUID, new FluidBuilder().temperature(temperature));
     }
 
-    static void addPlasma(Material material,int temperature) {
+    static void addPlasma(Material material, int temperature) {
         material.getProperties().ensureSet(PropertyKey.FLUID);
         material.getProperty(PropertyKey.FLUID).enqueueRegistration(FluidStorageKeys.PLASMA, new FluidBuilder().temperature(temperature));
     }

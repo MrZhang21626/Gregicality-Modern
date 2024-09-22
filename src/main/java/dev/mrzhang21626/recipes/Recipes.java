@@ -1,11 +1,13 @@
 package dev.mrzhang21626.recipes;
 
+import dev.mrzhang21626.recipes.chain.AluminiumChain;
 import net.minecraft.data.recipes.FinishedRecipe;
 
 import java.util.function.Consumer;
 
 public class Recipes {
     public static void init(Consumer<FinishedRecipe> provider) {
+        AluminiumChain.init(provider);
 //        GTRecipeTypes.BLAST_RECIPES.recipeBuilder(GregicalityModern.id("lithium_niobate"))
 //                .inputItems(TagPrefix.dust, Materials.NiobiumChloride, 6)
 //                .inputItems(TagPrefix.dust, Materials.LithiumHydride, 2)

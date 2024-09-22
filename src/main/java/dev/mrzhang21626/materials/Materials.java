@@ -182,7 +182,23 @@ public class Materials {
     public static Material Polyimide;
     public static Material FluorinatedEthylenePropylene;
 
-    //Simple Dust Materials
+    //Simple Fluid Materials
+    //Aluminium Chain
+    public static Material SodiumAluminateSolution;
+    public static Material SodiumHydroxideSolution;
+    public static Material SodiumHexafluoroaluminate;
+    public static Material SodiumHydroxideBauxite;
+    public static Material ImpureAluminiumHydroxideSolution;
+    public static Material SodiumBicarbonateSolution;
+    public static Material PureAluminiumHydroxideSolution;
+    public static Material RedMud;
+    public static Material NeutralisedRedMud;
+    public static Material FerricREEChloride;
+    public static Material RedSlurry;
+    public static Material TitanylSulfate;
+
+    //Rare Earth Chain
+    public static Material RareEarthChloridesSolution;
     public static Material NaquadricSolution;
     public static Material EnrichedNaquadricSolution;
     public static Material NaquadriaticSolution;
@@ -252,7 +268,6 @@ public class Materials {
     public static Material Ethylhexanol;
     public static Material DiethylhexylPhosphoricAcid;
     public static Material RareEarthHydroxidesSolution;
-    public static Material RareEarthChloridesSolution;
     public static Material LaNdOxidesSolution;
     public static Material SmGdOxidesSolution;
     public static Material TbHoOxidesSolution;
@@ -357,7 +372,6 @@ public class Materials {
     public static Material UraniumDiuranate;
     public static Material UraniumRefinementWasteSolution;
     public static Material ThoriumNitrateSolution;
-    public static Material SodiumHexafluoroaluminate;
     public static Material SodiumCarbonateSolution;
     public static Material SodiumSulfateSolution;
     public static Material SodiumChromateSolution;
@@ -405,7 +419,6 @@ public class Materials {
     public static Material TannicAcid;
     public static Material GermanicAcidSolution;
     public static Material GermaniumChloride;
-    public static Material SodiumHydroxideSolution;
     public static Material LithiumHydroxideSolution;
     public static Material LithiumPeroxideSolution;
     public static Material Ozone;
@@ -478,14 +491,6 @@ public class Materials {
     public static Material SeleniteTelluriteMix;
     public static Material SeleniteSolution;
     public static Material CopperRefiningSolution;
-    public static Material SodiumHydroxideBauxite;
-    public static Material ImpureAluminiumHydroxideSolution;
-    public static Material PureAluminiumHydroxideSolution;
-    public static Material RedMud;
-    public static Material NeutralisedRedMud;
-    public static Material FerricREEChloride;
-    public static Material RedSlurry;
-    public static Material TitanylSulfate;
     public static Material RubySlurry;
     public static Material SapphireSlurry;
     public static Material GreenSapphireSlurry;
@@ -648,7 +653,6 @@ public class Materials {
     public static Material HighEnergyQGP;
     public static Material AcetylsulfanilylChloride;
     public static Material BenzoylPeroxide;
-    public static Material Iron2Chloride;
     public static Material Propadiene;
     public static Material FluorophosphoricAcid;
     public static Material PhenylenedioxydiaceticAcid;
@@ -732,6 +736,10 @@ public class Materials {
     public static Material CesiumBromideSolution;
 
     //Simple Dust Materials
+    //AluminiumChain
+    public static Material AluminiumHydroxide;
+    public static Material AluminiumOxide;
+    public static Material AluminiumTrifluoride;
     public static Material IndiumTrifluoride;
     public static Material IndiumTrioxide;
     public static Material NaquadahConcentrate;
@@ -773,7 +781,6 @@ public class Materials {
     public static Material StreptococcusPyogenes;
     public static Material EschericiaColi;
     public static Material BifidobacteriumBreve;
-    public static Material Alumina;
     public static Material CupriavidusNecator;
     public static Material Shewanella;
     public static Material ZirconiumTetrachloride;
@@ -787,7 +794,6 @@ public class Materials {
     public static Material ZirconiumTetrafluoride;
     public static Material BariumDifluoride;
     public static Material LanthanumTrifluoride;
-    public static Material AluminiumTrifluoride;
     public static Material ErbiumTrifluoride;
     public static Material ZBLANDust;
     public static Material ErbiumDopedZBLANDust;
@@ -829,7 +835,6 @@ public class Materials {
     public static Material UranylThoriumNitrate;
     public static Material UraniumOxideThoriumNitrate;
     public static Material CaesiumHydroxide;
-    public static Material AluminiumHydroxide;
     public static Material GrapheneOxidationResidue;
     public static Material NiAlOCatalyst;
     public static Material FeCrOCatalyst;
